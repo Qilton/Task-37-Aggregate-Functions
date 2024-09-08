@@ -11,7 +11,7 @@ function App() {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:5000/users', { 
+      await axios.post('https://task-37-aggregate-functions-server.vercel.app/users', { 
         name, 
         age: parseInt(age), 
         score: parseFloat(score)
@@ -31,7 +31,7 @@ function App() {
 
   const handleGroup = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/users/age-group');
+      const response = await axios.get('https://task-37-aggregate-functions-server.vercel.app/users/age-group');
       
       setGroupedUsers(response.data);
       
